@@ -5,21 +5,23 @@
     <title>Animated Presents</title>
     <script src="https://unpkg.com/@rive-app/webgl@2.9.1"></script>
     <style>
+      html,
       body {
         margin: 0;
-        background-color: #12000e;
+        padding: 0;
+        background-color: rgb(69, 4, 50);
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
-        gap: 2rem;
       }
 
       canvas {
         display: block;
-        width: 458px;
-        height: 458px;
-        object-fit: contain;
+        width: 100%;
+        max-width: 458px;
+        height: auto;
+        aspect-ratio: 1 / 1;
         background-color: rgb(69, 4, 50);
       }
     </style>
