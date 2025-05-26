@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Animated Presents</title>
+  <script src="https://unpkg.com/@rive-app/webgl@2.9.1"></script>
+  <style>
+    body {
+      margin: 0;
+      background-color: #12000e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    canvas {
+      margin: 1em;
+      width: 300px;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="present_01"></canvas>
+  <canvas id="present_02"></canvas>
+
+  <script>
+    new rive.Rive({
+      src: 'presents.riv',
+      canvas: document.getElementById('present_01'),
+      artboard: 'Present_01',
+      autoplay: true
+    });
+
+    new rive.Rive({
+      src: 'presents.riv',
+      canvas: document.getElementById('present_02'),
+      artboard: 'Present_02',
+      autoplay: true
+    });
+  </script>
+</body>
+</html>
