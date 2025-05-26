@@ -39,7 +39,7 @@
         autoplay: true,
         onLoad: () => {
           rive1.resizeDrawingSurfaceToCanvas();
-        }
+        },
       });
 
       // Second present
@@ -51,20 +51,28 @@
         autoplay: true,
         onLoad: () => {
           rive2.resizeDrawingSurfaceToCanvas();
-        }
+        },
       });
 
       // Click interaction for present 01
-      document.getElementById('present_01').addEventListener('pointerdown', () => {
-        const input = rive1.stateMachineInputs('State Machine 1').find(i => i.name === 'tapped');
-        if (input) input.fire();
-      });
+      document
+        .getElementById('present_01')
+        .addEventListener('pointerdown', () => {
+          const input = rive1
+            .stateMachineInputs('State Machine 1')
+            .find((i) => i.name === 'tapped');
+          if (tapped) tapped.value = true;
+        });
 
       // Click interaction for present 02
-      document.getElementById('present_02').addEventListener('pointerdown', () => {
-        const input = rive2.stateMachineInputs('State Machine 1').find(i => i.name === 'tapped');
-        if (input) input.fire();
-      });
+      document
+        .getElementById('present_02')
+        .addEventListener('pointerdown', () => {
+          const input = rive2
+            .stateMachineInputs('State Machine 1')
+            .find((i) => i.name === 'tapped');
+          if (tapped) tapped.value = true;
+        });
     </script>
   </body>
 </html>
