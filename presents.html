@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Animated Presents</title>
-  <script src="https://unpkg.com/@rive-app/webgl@2.9.1"></script>
-  <style>
-    body {
-      margin: 0;
-      background-color: #12000e;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    canvas {
-      margin: 1em;
-      width: 300px;
-      height: 300px;
-    }
-  </style>
-</head>
-<body>
-  <canvas id="present_01"></canvas>
-  <canvas id="present_02"></canvas>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Animated Presents</title>
+    <script src="https://unpkg.com/@rive-app/webgl@2.9.1"></script>
+    <style>
+      body {
+        margin: 0;
+        background-color: #12000e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        gap: 2rem;
+      }
 
-  <script>
-    new rive.Rive({
-      src: 'presents.riv',
-      canvas: document.getElementById('present_01'),
-      artboard: 'Present_01',
-      autoplay: true
-    });
+      canvas {
+        display: block;
+        width: 458px;
+        height: 458px;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="present_01" width="458" height="458"></canvas>
+    <canvas id="present_02" width="458" height="458"></canvas>
 
-    new rive.Rive({
-      src: 'presents.riv',
-      canvas: document.getElementById('present_02'),
-      artboard: 'Present_02',
-      autoplay: true
-    });
-  </script>
-</body>
+    <script>
+      new rive.Rive({
+        src: 'presents.riv',
+        canvas: document.getElementById('present_01'),
+        artboard: 'Present_01',
+        autoplay: true,
+      });
+
+      new rive.Rive({
+        src: 'presents.riv',
+        canvas: document.getElementById('present_02'),
+        artboard: 'Present_02',
+        autoplay: true,
+      });
+    </script>
+  </body>
 </html>
